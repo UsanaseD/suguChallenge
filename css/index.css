@@ -1,0 +1,36 @@
+ *{
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: white;
+    font-family: Arial;
+    padding: 0px;
+    color: #0c0b0b;
+  }
+    table{
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    margin-top: auto;
+  }
+    table tH{
+    background: grey;
+    color: #ddd;
+  }
+  table td{
+    border: none;
+  }
+    #order{
+    width: 196px;
+    background: rgb(255, 255, 255);
+    border: none;
+    color: #ddd;
+  }
+  .div{
+     margin-right: auto;
+    overflow-y:visible;
+    overflow-x:visible;
+    width: 800px;
+    box-sizing: border-box;
+  }
