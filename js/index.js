@@ -35,8 +35,6 @@
                 button.appendChild(div);
                 div.addEventListener("click", (event) => {
                 getPosts(event)
-                 var tb = document.createElement("div")
-                col3.appendChild(tb)
         })
                 
                }
