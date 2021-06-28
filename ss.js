@@ -1,5 +1,5 @@
 
-        fetch('https://jsonplaceholder.typicode.com/users')
+            fetch('https://jsonplaceholder.typicode.com/users')
         .then(function (response) {
             return response.json();
         })
@@ -11,38 +11,17 @@
         });
 
     function appendData(data) {
-        var mainContainer = document.getElementById("col1");
+        var mainContainer = document.getElementById("users");
         for (var i = 0; i < data.length; i++) {
-            var li = document.createElement("tr");
-            li.innerHTML =  data[i].name;
+            var li = document.createElement("li");
+            li.innerHTML =  data[i].username;
+            li.classList.add('item');
+            li.dataset.userId = data[i].id;
             li.addEventListener('click', (event) => getPosts(event))
             mainContainer.appendChild(li);
         }
-         var secondContainer = document.getElementById("col2");
-        for (var i = 0; i < data.length; i++) {
-            var li = document.createElement("tr");
-            li.innerHTML =  data[i].email;
-            li.addEventListener('click', (event) => getPosts(event))
-            secondContainer.appendChild(li);
-        }
-        var button = document.getElementById("order");
-        var col3 = document.getElementById("col3");
-            for (var i = 0; i < data.length; i++) {
-                var div = document.createElement("button");
-                div.innerHTML = "Get User's Posts";
-                div.classList.add('item');
-                div.dataset.userId = data[i].id;
-                button.appendChild(div);
-                div.addEventListener("click", (event) => {
-                getPosts(event)
-                 var tb = document.createElement("div")
-                col3.appendChild(tb)
-        })
-                
-               }
-        }
 
-    
+    }
 
     function cleanPosts() {
         var users = document.querySelectorAll('.item ul');
